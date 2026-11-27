@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Soal Reader</title>
+<style>
+body {
+  background:#101522;
+  color:white;
+  font-family:Arial;
+  padding:20px;
+}
+.card {
+  background:#202b40;
+  padding:20px;
+  border-radius:15px;
+}
+button {
+  background:#2878ff;
+  color:white;
+  border:0;
+  padding:13px;
+  border-radius:9px;
+  width:100%;
+  margin-top:12px;
+}
+textarea {
+  width:100%;
+  height:120px;
+  margin-top:12px;
+  border-radius:8px;
+  padding:10px;
+  box-sizing:border-box;
+}
+</style>
+</head>
+<body>
+<h2>AI Soal Reader</h2>
+<div class="card">
+<h3>Pembaca Soal AI</h3>
+<p>Masukkan teks soal untuk mendapatkan bantuan belajar.</p>
+<textarea id="question" placeholder="Masukkan soal di sini..."></textarea>
+<button onclick="answer()">Bantu Jawab</button>
+<div id="result"></div>
+</div>
+<script>
+function answer() {
+ const q = document.getElementById("question").value;
+ const result = document.getElementById("result");
+ if (!q.trim()) {
+   result.innerText = "Masukkan soal terlebih dahulu.";
+   return;
+ }
+ result.innerText = "Soal diterima. Hubungkan layanan AI untuk mendapatkan jawaban dan pembahasan.";
+}
+</script>
+</body>
+</html>
